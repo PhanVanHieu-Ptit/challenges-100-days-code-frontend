@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Chữ cuộn dọc</title>
+</head>
+
+<body>
+    <div class="seconds_container">
+        <input type="number" name="seconds" class="input_field seconds_field focusseable" placeholder="2" min="1">
+        <span>Seconds</span>
+    </div>
+    <div class="slot">
+        <div id="container"><span>Thanh cuộn</span></div>
+    </div>
+    <div>
+        <form autocomplete="off" class="form">
+            <input class="focuseable input_field" name="word" placeholder="Nhập 1 từ vào" id="text_field">
+            <div class="buttons_container">
+                <button class="focuseable button button__add" title="Bạn có thể nhấn enter thay vì ấn vào nút"
+                    type="submit">Thêm mới</button>
+                <button class="focuseable button button__start">Bắt đầu nào!</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
