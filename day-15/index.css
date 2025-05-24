@@ -1,7 +1,7 @@
 :root {
     --radius: 40;
     --circle-radius: var(--radius);
-    --circumference: calc(var(--radius)*2*3.14);
+    --circumference: calc(var(--radius) * 2 * 3.14);
 
     --board-dimensions: 350px;
 
@@ -15,13 +15,20 @@
     --x-color: #67cbff;
     --o-color: #ff6780;
     --background-color: #f4faff;
-    --black: #383631;
+    --black: #282631;
 }
 
 body {
     background-color: var(--background-color);
     font-family: Arial, Helvetica, sans-serif;
     color: var(--black);
+}
+
+h1 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: bolder;
 }
 
 h1>.red {
@@ -45,26 +52,26 @@ h1>.blue {
 
 .line.vertical {
     height: var(--line-width-horizontal);
-    width: var(--line-width-horizontal);
+    width: var(--line-height-horizontal);
     border-radius: 10px;
     position: absolute;
     top: 0;
 }
 
 #h-1 {
-    top: calc((100%/3) - calc(var(--line-height-horizontal)/2));
+    top: calc((100% / 3) - calc(var(--line-height-horizontal) / 2));
 }
 
 #h-2 {
-    top: calc((100%/3)*2 -calc(var(--line-height-horizontal)));
+    top: calc((100% / 3) * 2 - calc(var(--line-height-horizontal)));
 }
 
 #v-1 {
-    left: calc((100%/3) - calc(var(--line-height-horizontal)/2));
+    left: calc((100% / 3) - calc(var(--line-height-horizontal) / 2));
 }
 
 #v-2 {
-    left: calc((100%/3)*2 - calc(var(--line-height-horizontal) / 2));
+    left: calc((100% / 3) * 2 - calc(var(--line-height-horizontal) / 2));
 }
 
 .grid {
@@ -106,12 +113,6 @@ h1>.blue {
 .vertical .fill {
     height: 100%;
     width: 100%;
-    transform: translateX(-100%);
-}
-
-.vertical .fill {
-    height: 100%;
-    width: 100%;
     transform: translateY(-100%);
     border-radius: 10px;
 }
@@ -125,11 +126,11 @@ h1>.blue {
 }
 
 #v-1>.fill {
-    animation: appearVertical 1s linear forwards calc(var(--delay) *2);
+    animation: appearVertical 1s linear forwards calc(var(--delay) * 2);
 }
 
 #v-2>.fill {
-    animation: appearVertical 1s linear forwards calc(var(--delay) *3);
+    animation: appearVertical 1s linear forwards calc(var(--delay) * 3);
 }
 
 .board {
@@ -190,11 +191,11 @@ h1>.blue {
 }
 
 .first-x-diagonal>.x-line {
-    animation: draw calc(var(--draw-animation) /2) linear forwards;
+    animation: draw calc(var(--draw-animation) / 2) linear forwards;
 }
 
 .second-x-diagonal>.x-line {
-    animation: draw calc(var(--draw-animation) /2) linear forwards calc(var(--draw-animation)/2);
+    animation: draw calc(var(--draw-animation) / 2) linear forwards calc(var(--draw-animation) / 2);
 }
 
 .first-x-diagonal {
@@ -217,8 +218,8 @@ h1>.blue {
 
 .box>.progress-ring {
     transform: translate(-50%, -50%) rotate(-90deg);
-    height: calc(var(--board-dimensions) /3);
-    width: calc(var(--board-dimensions)/3);
+    height: calc(var(--board-dimensions) / 3);
+    width: calc(var(--board-dimensions) / 3);
 }
 
 .progress-ring-circle {
@@ -252,7 +253,7 @@ h1>.blue {
     font-size: 1.3rem;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid --black;
+    border: 1px solid var(--black);
     border-bottom: 3px solid black;
     font-weight: bold;
     padding: 5px 10px;
@@ -276,6 +277,6 @@ h1>.blue {
     }
 
     #bottom-panel {
-        bottom: 8%
+        bottom: 8%;
     }
 }
